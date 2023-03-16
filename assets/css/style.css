@@ -2,16 +2,26 @@
 	margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-	font-family: 'Roboto Slab', serif;
+}
+@font-face{
+	src:url(../fonts/Roboto_slab/static/RobotoSlab-Regular.ttf);
+	font-family:'Rob';
+}
+body{
+	font-family: 'Rob';
 }
 :root{
-	--red:#f7483b;
-	--blue:#100a47;
-	--cream:#f2e5e4;
+	--red:#00008b;
+	/* --red:#f7483b; */
+	/* --blue:#100a47; */
+	--blue:#001233;
+	--cream:#dfe6e8;
+	--mint:#c8f3f4;
 }
 .cleaner{
 	clear:both;
 }
+ /* INDEX */
 li{
 	list-style-type:none;
 	text-decoration:none;
@@ -44,7 +54,7 @@ header{
 	display:inline;
 	padding:0px 10px;
 }
-.wrap img{
+.logo{
 	float:left;
 	width:160px;
 	margin-top:10px;
@@ -52,16 +62,14 @@ header{
 a{
 	text-decoration:none;
 	color:#fff;
-	font-family: 'Roboto Slab', serif;
 }
 a:hover{
-	color:#de140d;
+	color:var(--cream);
 }
 .header-text{
 	width:60%;
 	margin:0px auto;
 	text-align:center;
-	font-family: 'Roboto Slab', serif;
 	color:#fff;
 	padding-top:180px;
 }
@@ -76,10 +84,12 @@ a:hover{
 	position:relative;
 	top:30px;
 }
+a .button:hover{
+	color:var(--cream);
+}
 .small-title{
 	margin:30px auto;
 	text-align:center;
-	font-family: 'Roboto Slab', serif;
 	color:#454443;
 }
 /* CONTACT */
@@ -189,4 +199,105 @@ footer .wrap{
 #socials{
 	font-size:25px;
 	text-align:center;
+}
+.footer-content ul li a,.footer-content #socials a:hover{
+	color:var(--cream);
+}
+ /* ABOUT US */
+ 
+.about{
+	min-height:60vh;
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/background-about.jpg);
+	background-position:center;
+	background-size:cover;
+	position:relative;
+ }
+ .small-blocks{
+	display:flex;
+	justify-content:space-evenly;
+	margin-bottom:20px;
+ }
+ .small-block{
+	width:30%;
+	text-align:center;
+	padding:10px;
+ }
+ .small-block h2{
+	 color:var(--red);
+ }
+ .small-block p{
+	 color:var(--blue);
+	 font-weight:bold;
+ }
+ .small-block:hover{
+	 background-color:var(--cream);
+ }
+ .bcg{
+	background-color:var(--cream);
+}
+ .wrapped{
+	 width:60%;
+	 margin:0px auto;
+ }
+ .about-us{
+	 display:flex;
+	 justify-content:center;
+	 margin-bottom:30px;
+ }
+ .about-us .wrapped{
+	 display:flex;
+	 justify-content:center;
+	 margin:25px 0px;
+ }
+ article{
+	 width:48%;
+	 margin:0px;
+ }
+ article img{
+	 width:410px;
+	 margin:10px 0px;
+ }
+ article p{
+	 color:var(--blue);
+ }
+ .border{
+	 border-left:2px solid var(--cream);
+	 padding-left:30px;
+	 padding-top:0px;
+ }
+ .padding{
+	 padding:0px 0px;
+	 padding-right:30px;
+ }
+.margin-top{
+	margin-top:10px;
+}
+/* PEOPLE */
+
+.meet-us{
+	 display:flex;
+	 flex-wrap:wrap;
+	 justify-content:space-evenly;
+	 padding-bottom:30px;
+}
+.people{
+	width:300px;
+	margin:20px auto;
+	text-align:center;
+}
+.people img{
+	width:250px;
+	border-radius:50%;
+	box-shadow:2px 5px 5px 2px var(--cream);
+}
+.name{
+	font-size:25px;
+}
+.meet{
+	font-size:25px;
+	color:var(--red);
+	text-align:center;
+}
+.gradient{
+	background-image: linear-gradient(#fff,var(--mint));
 }
