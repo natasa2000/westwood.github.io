@@ -3,12 +3,10 @@
 	padding:0px;
 	box-sizing: border-box;
 }
-@font-face{
-	src:url(../fonts/Roboto_slab/static/RobotoSlab-Regular.TTF);
-	font-family:'Rob';
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
 body{
-	font-family: 'Rob';
+	font-family:'Roboto-Slab',sans-serif;
 }
 :root{
 	--red:#00008b;
