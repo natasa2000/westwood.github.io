@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 @font-face{
-	src:url(../fonts/Roboto_slab/static/RobotoSlab-Regular.ttf);
+	src:url(../fonts/Roboto_slab/static/RobotoSlab-Regular.TTF);
 	font-family:'Rob';
 }
 body{
