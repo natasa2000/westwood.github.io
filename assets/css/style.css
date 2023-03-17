@@ -3,18 +3,18 @@
 	padding:0px;
 	box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Slab:wght@200;300;400;500&display=swap');
 
 body{
-	font-family:'Roboto-Slab',sans-serif;
+	font-family: 'Roboto Slab', sans-serif;
+
 }
 :root{
-	--red:#00008b;
-	/* --red:#f7483b; */
-	/* --blue:#100a47; */
-	--blue:#001233;
-	--cream:#dfe6e8;
-	--mint:#c8f3f4;
+	--blue:#00008b;
+	--dark-blue:#001233;
+	--light-blue:#edf7f7;
+	--mint:#dff7f5;
+	--sea:#81c8de;
 }
 .cleaner{
 	clear:both;
@@ -62,7 +62,7 @@ a{
 	color:#fff;
 }
 a:hover{
-	color:var(--cream);
+	color:var(--mint);
 }
 .header-text{
 	width:60%;
@@ -83,7 +83,7 @@ a:hover{
 	top:30px;
 }
 a .button:hover{
-	color:var(--cream);
+	color:var(--mint);
 }
 .small-title{
 	margin:30px auto;
@@ -102,7 +102,7 @@ a .button:hover{
 	padding-top:90px;
 }
 .contact-info{
-	background-color: var(--cream);
+	background-color: var(--light-blue);
 	width:48%;
 	padding:75px 30px;
 	margin:20px 0px;
@@ -114,7 +114,7 @@ a .button:hover{
 }
 .contact-text{
 	font-size:25px;
-	color:var(--red);
+	color:var(--blue);
 	margin-bottom:30px;
 	text-align:center;
 }
@@ -127,7 +127,7 @@ a .button:hover{
 }
  /* FORM  */
 .contact-form{
-	background-color: var(--cream);
+	background-color: var(--light-blue);
 	width:47%;
 	border-radius:30px;
 	float:right;
@@ -139,7 +139,7 @@ a .button:hover{
 }
 input[type=text],input[type=email],input[type=subject]{
 	border-radius:5px;
-	border:1px solid var(--red);
+	border:1px solid var(--blue);
 }
 input[type=text]{
 	width:200px;
@@ -161,7 +161,7 @@ input[type=email],input[type=subject]{
 textarea{
 	width:99%;
 	border-radius:5px;
-	border-color:var(--red);
+	border-color:var(--blue);
 }
 label{
 	color:var(--blue);
@@ -172,7 +172,7 @@ placeholder{
 }
  /* FOOTER */
 footer{
-	background-color:var(--blue);
+	background-color:var(--dark-blue);
 	color:#fff;
 }
 footer .wrap{
@@ -198,8 +198,8 @@ footer .wrap{
 	font-size:25px;
 	text-align:center;
 }
-.footer-content ul li a,.footer-content #socials a:hover{
-	color:var(--cream);
+.footer-content ul li a:hover,.footer-content #socials a:hover{
+	color:var(--mint);
 }
  /* ABOUT US */
  
@@ -220,18 +220,14 @@ footer .wrap{
 	text-align:center;
 	padding:10px;
  }
- .small-block h2{
-	 color:var(--red);
- }
- .small-block p{
+ .small-block {
 	 color:var(--blue);
-	 font-weight:bold;
  }
  .small-block:hover{
-	 background-color:var(--cream);
+	 background-color:var(--mint);
  }
  .bcg{
-	background-color:var(--cream);
+	background-color:var(--mint);
 }
  .wrapped{
 	 width:60%;
@@ -259,7 +255,7 @@ footer .wrap{
 	 color:var(--blue);
  }
  .border{
-	 border-left:2px solid var(--cream);
+	 border-left:2px solid var(--mint);
 	 padding-left:30px;
 	 padding-top:0px;
  }
@@ -286,16 +282,154 @@ footer .wrap{
 .people img{
 	width:250px;
 	border-radius:50%;
-	box-shadow:2px 5px 5px 2px var(--cream);
+	box-shadow:2px 5px 5px 2px var(--mint);
 }
 .name{
 	font-size:25px;
 }
 .meet{
 	font-size:25px;
-	color:var(--red);
+	color:var(--blue);
 	text-align:center;
 }
 .gradient{
-	background-image: linear-gradient(#fff,var(--mint));
+	background-image: linear-gradient(var(--light-blue),var(--mint));
+}
+/* ADMISSIONS */
+
+.admissions{
+	min-height:60vh;
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/admissions.jpg);
+	background-position:center;
+	background-size:cover;
+	position:relative;
+ }
+.why{
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+	margin:30px 0px;
+}
+.why p{
+	width:60%;
+}
+.why h2{
+	font-size:40px ;
+	font-weight: 400;
+	padding:10px;
+	color:var(--blue);
+	background-image:linear-gradient(var(--sea), var(--sea));
+	background-size: 100% 5px;
+	background-repeat:no-repeat;
+	background-position:100% 0%;
+	transition:background-size .7s, background-position .5s ease-in-out;
+}
+.why h2:hover {
+	background-size:100% 100%;
+	background-position:0% 100%;
+	transition:background-position .7s, background-size .5s ease-in-out;
+}
+.bold{
+	font-size:20px ;
+	font-weight: 600;
+	color:var(--blue);
+}
+.reasons{
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center;
+	margin:20px auto;
+	
+}
+.reason{
+	width:25%;
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	background-color:var(--mint);
+	padding:40px;
+}
+.reason .fa{
+	font-size:50px;
+	margin-bottom:20px;
+}
+.reason h2{
+	color:var(--blue);
+	margin-bottom:15px;
+}
+.reason a{
+	margin-top:15px;
+	color:var(--blue);
+	background-color:var(--sea);
+	border-radius:30px;
+	padding:10px;
+	border:3px solid var(--sea);
+}
+.reason a:hover{
+	background-color:#fff;
+	border:3px solid var(--sea);
+}
+.careers h3,.careers p{
+	color:var(--blue);
+}
+.careers p{
+	font-size:18px;
+}
+.careers h3{
+	padding-top:20px;
+	margin-bottom:10px;
+	font-size:30px ;
+	font-weight: 600;
+}
+.career{
+	width:23%;
+	height:300px;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	margin:10px 0px;
+}
+.career p{
+	color:#fff;
+	padding-top:240px;
+	font-size:20px;
+	padding-bottom:35px;
+}
+.eng{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/engineer.jpg);
+}
+.law{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/lawyer.jpg);
+}
+.doc{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/doctor.jpg);
+}
+.dentist{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/dentist.jpg);
+}
+.teacher{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/teacher.jpg);
+}
+.art{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/artist.jpg);
+}
+.psych{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/psych.jpg);
+}
+.architect{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/architect.jpg);
+}
+#jobs{
+	padding-top:20px;
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	margin-bottom:30px;
+}
+.reason a,.career a{
+    cursor: pointer;
+}
+.career :hover{
+	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.50));
 }
