@@ -673,7 +673,7 @@ footer .wrap{
 	justify-content:flex-start;
 	align-items:center;
 }
-#about-author{
+#about-author,#author article img{
 	width:400px;
 }
 #about-author h1{
