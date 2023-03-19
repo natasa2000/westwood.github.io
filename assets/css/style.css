@@ -15,6 +15,7 @@ body{
 	--light-blue:#edf7f7;
 	--mint:#dff7f5;
 	--sea:#81c8de;
+	--blue-bcg:#00356b;
 }
 .cleaner{
 	clear:both;
@@ -34,9 +35,6 @@ header{
 	min-height:100vh;
 	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/background.jpg);
 }
-.nav{
-	width:100%;
-}
 .wrap{
 	width:70%;
 	height:100%;
@@ -52,17 +50,34 @@ header{
 	display:inline;
 	padding:0px 10px;
 }
+a{
+	text-decoration:none;
+	color:#fff;
+	cursor:pointer;
+}
+a:hover{
+	color:var(--mint);
+}
+nav a {
+    transition:all 400ms;
+    transition-duration:400ms;
+    transition-timing-function:ease;
+    transition-delay:0s;
+	transition-property:all;
+	border-bottom:2px solid transparent;
+}
+.nav-links ul li a:hover{
+	border-bottom:2px solid #fff;
+    padding:5px 0px;
+}
+.hover{
+	border-bottom:1px solid #fff;
+    padding:5px 0px;
+}
 .logo{
 	float:left;
 	width:160px;
 	margin-top:10px;
-}
-a{
-	text-decoration:none;
-	color:#fff;
-}
-a:hover{
-	color:var(--mint);
 }
 .header-text{
 	width:60%;
@@ -85,11 +100,189 @@ a:hover{
 a .button:hover{
 	color:var(--mint);
 }
-.small-title{
-	margin:30px auto;
-	text-align:center;
-	color:#454443;
+#university{
+	width:100%;
+	background-color:var(--blue-bcg);
+	display:flex;
+	justify-content:center;
+	position:relative;
+	padding:70px 0px;
 }
+.column{
+	display:flex;
+	flex-direction:column;
+	z-index:1;
+}
+.row{
+	display:flex;
+	align-items:flex-end;
+	z-index:1;
+}
+.square{
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	width:230px;
+	height:230px;
+	padding-left:10px;
+	transition:transition 1s;
+}
+.square:hover p,.bigger:hover p{
+	transform:translateY(-50%);
+}
+.square h2{
+	font-size:20px;
+	padding-top:140px;
+	padding-bottom:10px;
+	color:#fff;
+}
+.square a,#find a{
+	font-weight:bold;
+	padding:5px 10px;
+	color:#fff;
+	background-color:var(--blue-bcg);
+	border-radius:30px;
+	border-bottom:3px solid #fff;
+	border-top:3px solid #fff;
+}
+.square a:hover,#find a:hover{
+	color:var(--blue-bcg);
+	background-color:#fff;
+}
+.square p{
+	position:absolute;
+	bottom:8px;
+	left:16px;
+	color:#fff;
+	font-size:18px;
+	font-weight:bold;
+}
+.majors{
+	background-image:linear-gradient(rgba(40, 109, 192, 0.3), rgba(40, 109, 192, 0.3)),url(../img/major.jpg);
+}
+.arch{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/arch.jpg);
+}
+.eng{
+	background-image:linear-gradient(rgba(40, 109, 192, 0.3), rgba(40, 109, 192, 0.3)),url(../img/eng.jpg);
+}
+.art{
+	background-image:linear-gradient(rgba(40, 109, 192, 0.3), rgba(40, 109, 192, 0.3)),url(../img/art.jpg);
+}
+.law{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/lawy.jpg);
+}
+.psych{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/psych.jpg);
+}
+.teach{
+	background-image:linear-gradient(rgba(40, 109, 192, 0.3), rgba(40, 109, 192, 0.3)),url(../img/teach.jpg);
+}
+.den{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/den.jpg);
+}
+.bigger{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/lab.jpg);
+	width:600px;
+	height:600px;
+	position:absolute;
+	right:220px;
+	top:0px;
+}
+.bigger p{
+	position: absolute;
+	bottom: 150px;
+	left: 100px;
+}
+.experience{
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	height:400px;
+	margin:20px 0px;
+}
+.experience h2{
+	color:#fff;
+	text-align:left;
+	position:absolute;
+	bottom:0px;
+	left:10px;
+	transition:transform 1s;
+	word-wrap: break-word;
+}
+.experience p{
+    transition:transform 1s;
+	display:block;
+    overflow: hidden;
+    opacity: 0;
+	text-align:left;
+	position:absolute;
+	bottom:-120px;
+	left:10px;
+	font-size:17px;
+}
+.experience:hover p{
+	transform:translateY(-50%);
+	text-align:left;
+	position:absolute;
+	bottom:0px;
+	left:10px;
+	opacity:5;
+	color:#fff;
+}
+.experience:hover h2{
+	transform:translateY(-200%);
+	text-align:left;
+	position:absolute;
+	bottom:70px;
+	left:10px;
+	opacity:5;
+}
+
+.exp{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url(../img/academic.jpg);
+}
+.disc{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url(../img/discovery.jpg);
+}
+.learner{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url(../img/learner.jpg);
+}
+#path{
+	background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),url(../img/path-bcg.jpg);
+	width:100%;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	min-height:60vh;
+}
+#find{
+	position:relative;
+	left:900px;
+	top:110px;
+	width:450px;
+	height:250px;
+	border:2px solid #fff;
+	padding:20px;
+	color:#fff;
+	background-color:var(--blue-bcg);
+	
+}
+
+#find h3{
+	font-size:25px;
+	margin-bottom:5px;
+}
+#find p{
+	font-size:17px;
+	margin-bottom:15px;
+}
+.margin-right{
+	margin-right:10px;
+}
+
+
+
 /* CONTACT */
 .contact{
 	min-height:60vh;
@@ -102,7 +295,7 @@ a .button:hover{
 	padding-top:90px;
 }
 .contact-info{
-	background-color: var(--light-blue);
+	background-color: var(--mint);
 	width:48%;
 	padding:75px 30px;
 	margin:20px 0px;
@@ -127,12 +320,12 @@ a .button:hover{
 }
  /* FORM  */
 .contact-form{
-	background-color: var(--light-blue);
+	background-color: var(--mint);
 	width:47%;
 	border-radius:30px;
 	float:right;
 	margin:20px 0px;
-	padding:30px;
+	padding:30px 30px 10px 30px;
 }
 .area{
 	margin:10px 0px;
@@ -170,26 +363,45 @@ label{
 placeholder{
 	color:var(--blue);
 }
+.submit-btn{
+	font-size:15px;
+	padding:5px 15px;
+	color:var(--blue);
+	background-color:var(--sea);
+	border-radius:30px;
+	border:3px solid var(--sea);
+}
+.submit-btn:hover{
+	background-color:#fff;
+	border:3px solid var(--sea);
+}
  /* FOOTER */
 footer{
-	background-color:var(--dark-blue);
+	background-color:var(--blue-bcg);
 	color:#fff;
 }
 footer .wrap{
 	display:flex;
 	justify-content:space-between;
 }
+.footer-content{
+	width:25%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+}
 .footer-content ul li{
 	display:flex;
-	justify-content:flex-end;
+	align-items:center;
 	font-size:15px;
-	margin:5px 0px;
+	margin:5px 15px;
 }
-.footer-content img{
-	padding-top:20px;
+.footer-content ul{
+	display: grid;
+    grid-template-columns: repeat(2, auto);
 }
 .footer-content h3{
-	padding-top:35px;
 	font-size:22px;
 	margin:5px 0px;
 	text-align:center;
@@ -201,6 +413,9 @@ footer .wrap{
 .footer-content ul li a:hover,.footer-content #socials a:hover{
 	color:var(--mint);
 }
+
+
+
  /* ABOUT US */
  
 .about{
@@ -237,6 +452,7 @@ footer .wrap{
 	 display:flex;
 	 justify-content:center;
 	 margin-bottom:30px;
+	 color:var(--blue);
  }
  .about-us .wrapped{
 	 display:flex;
@@ -245,14 +461,10 @@ footer .wrap{
  }
  article{
 	 width:48%;
-	 margin:0px;
  }
- article img{
+ .about-img{
 	 width:410px;
 	 margin:10px 0px;
- }
- article p{
-	 color:var(--blue);
  }
  .border{
 	 border-left:2px solid var(--mint);
@@ -289,6 +501,7 @@ footer .wrap{
 }
 .meet{
 	font-size:25px;
+	padding-top:10px;
 	color:var(--blue);
 	text-align:center;
 }
@@ -369,6 +582,9 @@ footer .wrap{
 	background-color:#fff;
 	border:3px solid var(--sea);
 }
+.experience h2{
+	color:#fff;
+}
 .careers h3,.careers p{
 	color:var(--blue);
 }
@@ -395,13 +611,13 @@ footer .wrap{
 	font-size:20px;
 	padding-bottom:35px;
 }
-.eng{
+.engineer{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/engineer.jpg);
 }
-.law{
+.lawyer{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/lawyer.jpg);
 }
-.doc{
+.doctor{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/doctor.jpg);
 }
 .dentist{
@@ -410,10 +626,10 @@ footer .wrap{
 .teacher{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/teacher.jpg);
 }
-.art{
+.artist{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/artist.jpg);
 }
-.psych{
+.psychologist{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.9)),url(../img/psych.jpg);
 }
 .architect{
@@ -427,9 +643,40 @@ footer .wrap{
 	justify-content:space-between;
 	margin-bottom:30px;
 }
-.reason a,.career a{
+.reason a,{
     cursor: pointer;
 }
 .career :hover{
 	background-image:linear-gradient(180deg,rgba(29,29,29,0),rgba(29,29,29,.10) 27.44%,rgba(29,29,29,.50));
+}
+/* GALLERY */
+
+.hor{
+	display:flex;
+	justify-content:center;
+	margin:20px 0px;
+	
+}
+.hor img{
+	width:24%;
+	margin-right:15px;
+}
+
+
+/* AUTHOR */
+
+.nav-bcg{
+	background-color:var(--blue-bcg);
+}
+#author{
+	display:flex;
+	justify-content:flex-start;
+	align-items:center;
+}
+#about-author{
+	width:400px;
+}
+#about-author h1{
+	font-size:30px;
+	margin-bottom:10px;
 }
