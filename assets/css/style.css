@@ -102,33 +102,21 @@ a .button:hover{
 }
 #university{
 	width:100%;
-	height:800px;
 	background-color:var(--blue-bcg);
 	display:flex;
 	justify-content:center;
 	position:relative;
-	padding:50px 0px;
+	padding:70px 0px;
 }
 .column{
 	display:flex;
 	flex-direction:column;
 	z-index:1;
-	position:absolute;
-}
-.column-one{
-	left:300px;
-}
-.column-two{
-	left:530px;
 }
 .row{
 	display:flex;
 	align-items:flex-end;
 	z-index:1;
-	height:230px;
-	position:absolute;
-	top:510px;
-	right:299px;
 }
 .square{
 	background-position:center;
@@ -206,8 +194,9 @@ a .button:hover{
 .bigger p{
 	position: absolute;
 	bottom: 120px;
-	left: 100px;
+	left: 120px;
 	font-size:25px;
+	z-index:3;
 }
 .experience{
 	background-position:center;
