@@ -631,7 +631,7 @@ input[type=text],input[type=email],input[type=subject]{
 	border:1px solid var(--blue);
 }
 input[type=text]{
-	width:200px;
+	width:189px;
 }
 input[type=email],input[type=subject]{
 	width:99%;
